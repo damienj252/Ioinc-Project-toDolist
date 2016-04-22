@@ -16,6 +16,13 @@ angular.module('starter.controllers', [])
   
   $scope.data = data;
   $scope.addTask = addTask;
-})
+    
+      //This fuction allows the user to reset the number
+    $scope.reset = function() 
+    {
+      $scope.score = " ";
+    }
+	
+    
+});
 
-;
