@@ -1,0 +1,23 @@
+<ion-view view-title="To Do list">
+  <ion-content>
+      
+      <div class="card">
+        <ion-list>
+            
+                <ion-item ng-repeat="task in data.tasks">
+                    <h3>{{ task.title }}</h3>
+                    <h6>{{ task.added | date:  'dd-MM-yyyy HH:mm' }}</h6>
+                </ion-item>
+            
+                
+          
+        </ion-list>
+     </div>
+             
+    
+        
+         
+         
+          
+  </ion-content>
+</ion-view>
