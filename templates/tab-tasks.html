@@ -2,16 +2,16 @@
   <ion-content>
       
       <div class="card">
-        <ion-list>
+        <ion-list show-delete="shouldShowDelete">
             
                 <ion-item ng-repeat="task in data.tasks">
+                    <ion-delete-button class="ion-minus-circled"></ion-delete-button>
                     <h3>{{ task.title }}</h3>
                     <h6>{{ task.added | date:  'dd-MM-yyyy HH:mm' }}</h6>
-                </ion-item>
-            
-                
-          
+                </ion-item>    
+                      
         </ion-list>
+          <ion-toggle ng-model="shouldShowDelete">Edit</ion-toggle>
      </div>
              
     
