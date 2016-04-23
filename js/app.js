@@ -31,8 +31,17 @@ angular
       }
     }
   });
+    
+    /*.controller("ExampleController", function($scope){
+    
+    $scope.deleteEvent = frunction(){
+        alert("Delete");
+    }
+});*/
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/tasks');
 
 });
+
+
