@@ -21,6 +21,12 @@ angular.module('starter.controllers', [])
     Task.addTask(data.newTask);
     data.newTask = "";
   }
+    
+    //This function I tried to use to delete a task from the object array using splice
+   function deleteTask(){
+        objectArray.object.splice(objectArray.object.indexOf(task),1);
+    }
+    
 
   $scope.data = data;
   $scope.addTask = addTask;
