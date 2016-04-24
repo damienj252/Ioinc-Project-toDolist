@@ -14,4 +14,9 @@ angular.module('starter.services', [])
     data: data
     , addTask: addTask
   };
+    
+function save(){
+    window.localStorage['tasks'] = angular.toJson(allTasks);
+}
+    
 });

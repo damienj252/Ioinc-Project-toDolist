@@ -1,36 +1,25 @@
 <ion-view view-title="To Do list">
   <ion-content>
       
-      <div class="card">
-          <!--
+      <!--This shows the delete option in the list-->
         <ion-list show-delete="shouldShowDelete">
--->
             
-            <ion-list show-delete="false" can swipe="true">
-                
-                
-            <ion-item ng-repeat="task in data.tasks">
-                
-                    <!--
-                    <ion-delete-button class="ion-minus-circled" ng-click="reset()"></ion-delete-button>
--->
-            
+                <ion-item ng-repeat="task in data.tasks">
+                    
+                    <!--This is the delete button that is showen when the edit toggle is clicked-->
+                    <ion-delete-button class="ion-minus-circled" ng-click="data.deleteTask($index)"></ion-delete-button>
+                    
+                    <!--This shows the task and the date and time it was issued-->
                     <h3>{{ task.title }}</h3>
                     <h6>{{ task.added | date:  'dd-MM-yyyy HH:mm' }}</h6>
-                        
-                </ion-item>    
-                   
-                      
-        </ion-list>
-          <!--
+                    
+                </ion-item>
+                               
+        </ion-list>             
+           
+      <!--This is the toggle option with the label edit-->
           <ion-toggle ng-model="shouldShowDelete">Edit</ion-toggle>
--->
-     </div>
-             
-    
-        
-         
-         
           
-  </ion-content>
+  </ion-content>  
 </ion-view>
+       
